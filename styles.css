@@ -3,18 +3,18 @@ body {
 }
 
 h1 {
-    color: #538d4e;;
+    color: #538d4e;
+    font-family: monospace;
     text-align:  center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: italic;
 }
 
 header {
     color: #538d4e;
     margin: 2rem;
-    font-size: 18px;
+    font-size: 20px;
 }
-
 
 
 #about {
