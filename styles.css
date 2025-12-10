@@ -19,32 +19,102 @@ header {
 
 #about {
   display: flex;
+  font-size: large;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    margin-top: 3rem;
+    gap: 2rem;
+    align-items: center;
+
+    background-color: #c3cac7;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1000px;
+    width: 100%;
+
+    border: 2px solid #538d4e;
+
+
+}
+
+.intro-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;  
+  border: 2px solid #538d4e;  
+}
+
+
+#experience {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  padding: 3rem;
+}
+.experience-card {
+  background-color: #c3cac7;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  border: 2px solid #538d4e;
+
+  color: #121213;
+  line-height: 1.6;
+}
+
+.experience-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+}
+
+.experience-card li::marker {
+  color: #538d4e;
+}
+
+
+#contact {
+  display: flex;
+  font-size: large;
   justify-content: center;
   padding: 3rem;
 }
 
-.about-card {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  margin-right: 1rem;
-
-  background-color: #c3cac7;   /* dark card bg */
+.contact-card {
+  background-color: #c3cac7;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
-
   border: 2px solid #538d4e;
+
+  color: #121213;
+  line-height: 1.6;
 }
 
-.about-image img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;        /* rounded corners */
-  border: 2px solid #538d4e;  /* match your color theme */
+.contact-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
+
+.contact-card ul {
+  padding-left: 1.2rem;
+}
+
+.contact-card li::marker {
+  color: #538d4e;
+}
+
 
 
 #name-wordle {
@@ -105,7 +175,7 @@ header {
 
 
 .tile .flip.reveal {
-    animation: flip-in 2s ease forwards;
+    animation: flip-in 1s ease forwards;
     color: white;
 }
 
