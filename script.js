@@ -30,7 +30,7 @@ if (form) {
       const res = await fetch("https://kmy1rl7d2j.execute-api.us-west-2.amazonaws.com/default/contact", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
