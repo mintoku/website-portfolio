@@ -16,6 +16,22 @@ header {
     font-size: 20px;
 }
 
+a:link {
+  color: #538d4e; /* Unvisited link color */
+}
+
+a:visited {
+  color: rgb(69, 116, 255); /* Visited link color */
+}
+
+a:hover {
+  color: yellow; /* Mouse over link color */
+}
+
+a:active {
+  color: yellow; /* Selected link color */
+}
+
 
 #about {
   display: flex;
@@ -118,6 +134,7 @@ header {
   font-size: large;
   justify-content: center;
   padding: 3rem;
+  margin-bottom: 5rem;
 }
 
 .contact-card {
