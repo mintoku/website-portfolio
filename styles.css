@@ -17,11 +17,11 @@ header {
 }
 
 a:link {
-  color: #538d4e; /* Unvisited link color */
+  color: red; /* Unvisited link color */
 }
 
 a:visited {
-  color: rgb(69, 116, 255); /* Visited link color */
+  color: #538d4e; /* Visited link color */
 }
 
 a:hover {
