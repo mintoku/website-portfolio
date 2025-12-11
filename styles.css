@@ -82,6 +82,35 @@ header {
   color: #538d4e;
 }
 
+#projects {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  padding: 3rem;
+}
+.projects-card {
+  background-color: #c3cac7;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  border: 2px solid #538d4e;
+
+  color: #121213;
+  line-height: 1.6;
+}
+
+.projects-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.projects-card ul {
+  padding-left: 1.2rem;
+}
+
+.projects-card li::marker {
+  color: #538d4e;
 
 #contact {
   display: flex;
