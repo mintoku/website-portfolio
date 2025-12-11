@@ -85,8 +85,12 @@
       <h2>About me</h2>
       <p>
         Hi there! I'm Jovia, and I'm currently studying computer science at UC Santa Barbara.
+        I chose CS because I love the idea of being able to use software in genuinely exciting, 
+        meaningful applications.
         I'm interested in philosophy, aerospace, and art. In my free time
-        you'll find me playing poker and doing all the NYT games.
+        you'll find me playing poker and doing all the NYT games. <br> <br> <br>
+        Let's connect! <br><br>
+        <strong>jovialow23@gmail.com | jovia@ucsb.edu | <a href="https:www.linkedin.com/in/jovia-low">Linkedin</a></strong>
       </p>
     </div>
   </div>
@@ -123,10 +127,9 @@
         </ul>
         <a href="https://github.com/jenna360/acm-poker">Tournament Poker Bot</a>
         <ul>
-            <li>Developed a Python-based poker bot for an ACM online tournament, implementing hand evaluation and strategic decision logic</li>
-            <li>Implemented logic to parse game state input and generate valid poker actions under performance constraints (e.g., time limits, interface specifications).</li>
+            <li>Python-based poker bot for an ACM online tournament, implementing hand evaluation and strategic decision logic</li>
+            <li>Game state logic and poker actions under constraints.</li>
         </ul>
-
       </li>
 
       
@@ -134,15 +137,24 @@
   </div>
 </section>
 
-  <section id="contact">
+<section id="contact">
     <div class="contact-card">
         <h2>Reach me!</h2>
-      <p>
-        jovialow23@gmail.com | jovia@ucsb.edu | <a href="https:www.linkedin.com/in/jovia-low">linkedin</a>
-      </p>
-  </section>
+        <form id="contact-form">
+            <label>Jovia Low</label>
+            <input type="text" name="name" required />
+
+            <labe>Email</label>
+            <input type="text" name="email" required />
+
+            <label>Your message</label>
+            <textarea name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+            <p id="contact-status" class=""
+        </form>
     </div>
-    
+</section>
 
   <script src="script.js"></script>
 </body>
