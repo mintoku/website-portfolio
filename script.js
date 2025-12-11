@@ -27,7 +27,7 @@ if (form) {
     };
 
     try {
-      const res = await fetch("https://i095hd9rbj.execute-api.us-east-1.amazonaws.com/", {
+      const res = await fetch("https://kmy1rl7d2j.execute-api.us-west-2.amazonaws.com/default", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
