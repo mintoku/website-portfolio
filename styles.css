@@ -111,6 +111,7 @@ header {
 
 .projects-card li::marker {
   color: #538d4e;
+}
 
 #contact {
   display: flex;
