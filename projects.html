@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css" />
+<body style="background-color: #121213">
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</header>
+
+<section id="name-wordle">
+    <div class="wordle-title">
+    <div class="tile"><div class="flip green">P</div></div>
+    <div class="tile"><div class="flip green">R</div></div>
+    <div class="tile"><div class="flip yellow">O</div></div>
+    <div class="tile"><div class="flip green">J</div></div>
+    <div class="tile"><div class="flip yellow">E</div></div>
+    <div class="tile"><div class="flip gray">C</div></div>
+    <div class="tile"><div class="flip green">T</div></div>
+    <div class="tile"><div class="flip yellow">S</div></div>
+</section>
+
+<section id="experience">
+  <div class="experience-card">
+    <h2>A snapshot of what I've done</h2>
+    <ul>
+      <li>
+        <strong>Research in UCSB's networking MOMENT Lab</strong> — webscaping, querying, and analyzing broadband
+        affordability data using PostgreSQL, Docker, and Python.
+      </li>
+      <li>
+        <strong>IT Services at UCSB</strong> — improving support
+        workflows using ServiceNow, PowerBI, and internal tools.
+      </li>
+      <li>
+        <strong>Research Internships</strong> — at NASA Ames Research Center and Lawrence Berkeley Laboratory (<a href="https://ntrs.nasa.gov/citations/20230013018">HERE</a> is my published research paper from NASA)
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="projects-card">
+    <h2>Some personal projects <a href="https://github.com/mintoku">(Github here)</a></h2>
+      
+        <li>
+            <strong><a href="https://github.com/jenna360/acm-poker">Tournament Poker Bot</a></strong>
+        <ul>
+            <li>Python-based poker bot for an ACM online tournament, implementing hand evaluation and strategic decision logic</li>
+            <li>Game state logic and poker actions under constraints.</li>
+        </ul>
+        </li>
+
+      <li>
+        <strong><a href="https://github.com/mintoku/flight-price-tracker">Southwest Flight Price tracker</a></strong>
+        <ul>
+            <li>Automated flight price tracking tool using Python, implementing screen-region capture, OCR parsing, and Discord webhook notifications.</li>
+            <li>UI automation techniques (PyAutoGUI), OCR processing (Tesseract), and event-driven architecture to monitor web content.</li>
+        </ul>
+        <li>
+        <strong><a href="http://jovialow.me/">jovialow.me</a></strong>
+        <ul>
+            <li>This website actually contains a serverless backend for the contact messaging feature.
+                Deployed API Gateway -> Lambda -> SES pipeline to  process and email form submissions.
+                Used AWS Lambda, AWS API Gateway, Amazon SES, IAM permissions, REST APIs
+            </li>
+        </ul>
+        </li>        
+        
+      </li>
+
+      
+    </ul>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
