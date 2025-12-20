@@ -6,13 +6,23 @@
     <link rel="icon" href="jovia_fav.ico">
 </head>
 
+<header class="site-header">
+        <div class="nav-inner">
+          <!-- Left: brand -->
+          <a class="brand" href="index.html" aria-label="Go to home">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <span class="brand-name">Jovia Low</span>
+          </a>
 
-<header>
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-</header>
+          <!-- Right: nav -->
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link nav-cta">Contact</a>
+          </nav>
+        </div>
+      </header>
 
 <section id="name-wordle">
     <div class="wordle-title">
@@ -25,64 +35,65 @@
     <div class="tile"><div class="flip green">T</div></div>
     <div class="tile"><div class="flip yellow">S</div></div>
 </section>
+<main>
+    <section id="projects">
+    <div class="projects-card">
+        <h2 style="font-size: 30px;">Some personal projects <a href="https://github.com/mintoku">(Github)</a></h2> <br>
 
-<section id="projects">
-  <div class="projects-card">
-    <h2 style="font-size: 30px;">Some personal projects <a href="https://github.com/mintoku">(Github)</a></h2> <br>
+            <li>
+            <strong style="font-size: 24px;"><a href="https://github.com/mintoku/sb-serves">UCSB Student Services Marketplace</a></strong>
+            - <strong style="font-size: 24px;"><a href="https://sbserves.com">SB Serves Website</a></strong>
+            <ul>
+                <li>Full-stack student service marketplace that centralizes student-provided services to connect skilled students with customers            </li>
+                <li>Built using Next.js, React, and TypeScript, with a UI
+                    styled in Tailwind CSS.  Backend implemented through Next.js API routes connected to Supabase PostgreSQL for
+                    data storage
+                </li> 
+            </ul>
+
 
         <li>
-        <strong style="font-size: 24px;"><a href="https://github.com/mintoku/sb-serves">UCSB Student Services Marketplace</a></strong>
-        - <strong style="font-size: 24px;"><a href="https://sbserves.com">SB Serves Website</a></strong>
-        <ul>
-            <li>Full-stack student service marketplace that centralizes student-provided services to connect skilled students with customers            </li>
-            <li>Built using Next.js, React, and TypeScript, with a UI
-                styled in Tailwind CSS.  Backend implemented through Next.js API routes connected to Supabase PostgreSQL for
-                data storage
-            </li> 
-        </ul>
+            <strong style="font-size: 24px;"><a href="https://github.com/mintoku/flight-price-tracker">Southwest Flight Price tracker</a></strong>
+            <ul>
+                <li>I often buy plane tickets months early and find out later prices dropped drastically. 
+                    So, I built this flight price tracking tool using Python, implementing screen-region capture,
+                    OCR parsing, and Discord webhook notifications (to text me the new prices!).</li>
+                <li>UI automation (PyAutoGUI), OCR processing (Tesseract) to monitor web content.
+                </li> 
+            </ul>
+        
+            <strong style="font-size: 24px;"><a href="https://github.com/jenna360/acm-poker">Competitive Poker Bot</a></strong>
+            <ul>
+                <li>A product of my two favorite things: poker and coding. I made a Python-based poker 
+                    bot for an ACM poker bot tournament, implementing hand evaluation and strategic decision 
+                    logic based off what I knew about poker theory.</li>
+            </ul>
+            </li>
 
-
-      <li>
-        <strong style="font-size: 24px;"><a href="https://github.com/mintoku/flight-price-tracker">Southwest Flight Price tracker</a></strong>
-        <ul>
-            <li>I often buy plane tickets months early and find out later prices dropped drastically. 
-                So, I built this flight price tracking tool using Python, implementing screen-region capture,
-                 OCR parsing, and Discord webhook notifications (to text me the new prices!).</li>
-            <li>UI automation (PyAutoGUI), OCR processing (Tesseract) to monitor web content.
+            <strong style="font-size: 24px;"><a href="https://github.com/mintoku/website-portfolio">jovialow.me</a></strong>
+            <ul>
+                <li>How meta! This website actually contains a serverless backend for the contact messaging feature.
+                    I deployed API Gateway -> Lambda -> SES pipeline to  process and email form submissions.
+                    I used AWS Lambda, AWS API Gateway, Amazon SES, IAM permissions, and REST APIs
+                </li>
+            </ul>
+            
+            </li>     
+            <li>
+                <strong>And many more!</a></strong>
+                <ul>
+                    I'm always thinking of something or trying things out, even if they don't make it onto here.
+                    For the most up-to-date compilation of my work, check out my github (linked above)
+                </ul>  
             </li> 
-        </ul>
-     
-        <strong style="font-size: 24px;"><a href="https://github.com/jenna360/acm-poker">Competitive Poker Bot</a></strong>
-        <ul>
-            <li>A product of my two favorite things: poker and coding. I made a Python-based poker 
-                bot for an ACM poker bot tournament, implementing hand evaluation and strategic decision 
-                logic based off what I knew about poker theory.</li>
-        </ul>
+            
         </li>
 
-        <strong style="font-size: 24px;"><a href="https://github.com/mintoku/website-portfolio">jovialow.me</a></strong>
-        <ul>
-            <li>How meta! This website actually contains a serverless backend for the contact messaging feature.
-                I deployed API Gateway -> Lambda -> SES pipeline to  process and email form submissions.
-                I used AWS Lambda, AWS API Gateway, Amazon SES, IAM permissions, and REST APIs
-            </li>
+        
         </ul>
-        
-        </li>     
-        <li>
-            <strong>And many more!</a></strong>
-            <ul>
-                I'm always thinking of something or trying things out, even if they don't make it onto here.
-                For the most up-to-date compilation of my work, check out my github (linked above)
-            </ul>  
-        </li> 
-        
-      </li>
+    </div>
+    </section>
 
-      
-    </ul>
-  </div>
-</section>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+    </body>
+</main>
