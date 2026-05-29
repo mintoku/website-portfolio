@@ -129,10 +129,13 @@ body {
 
 
 
-main a:link { color: #138b08; font-weight: bold; }
-main a:visited { color: rgb(13, 78, 199); }
-main a:hover { color: black; }
-main a:active { color: pink; }
+main a,
+main a:visited,
+main a:hover,
+main a:active {
+  color: #138b08;
+  font-weight: bold;
+}
 
 
 #about {
@@ -201,36 +204,61 @@ main a:active { color: pink; }
   color: #538d4e;
 }
 
-#projects {
+#portfolio {
   display: flex;
   font-size: large;
   justify-content: center;
-  padding: 3rem;
+  padding: 1rem 3rem 4rem;
 }
-.projects-card {
+
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.portfolio-card {
   background-color: #c3cac7;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 1000px;
   width: 100%;
   border: 2px solid #538d4e;
-  margin-bottom: 4rem;
-
   color: #121213;
   line-height: 1.6;
 }
 
-.projects-card h2 {
+.portfolio-card h2 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.projects-card ul {
-  padding-left: 1.2rem;
+.portfolio-lead {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  opacity: 0.85;
 }
 
-.projects-card li::marker {
-  color: #538d4e;
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-list > li {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(83, 141, 78, 0.35);
+}
+
+.portfolio-list > li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.portfolio-item-desc {
+  margin: 0.35rem 0 0;
+  font-weight: 400;
 }
 
 #contact {
