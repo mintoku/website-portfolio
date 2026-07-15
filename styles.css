@@ -9,7 +9,7 @@
   --text-on-dark-muted: rgba(255, 255, 255, 0.7);
   --accent: #538d4e;
   --accent-bright: #6aaa64;
-  --accent-link: #138b08;
+  --accent-link: #0a5c06;
   --tile-yellow: #c9b458;
   --tile-gray: #404040;
   --tile-border: #494949;
@@ -178,7 +178,7 @@ main a:active {
 }
 
 main a:hover {
-  color: #0f6e06;
+  color: #074004;
 }
 
 /* ——— Shared panels ——— */
@@ -255,7 +255,7 @@ main a:hover {
 }
 
 #experience .project-card {
-  background: rgba(216, 221, 217, 0.72);
+  background: rgba(216, 221, 217, 0.88);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-color: rgba(83, 141, 78, 0.4);
@@ -263,7 +263,7 @@ main a:hover {
 }
 
 #experience .project-card:hover {
-  background: rgba(216, 221, 217, 0.86);
+  background: rgba(216, 221, 217, 0.96);
   border-color: rgba(83, 141, 78, 0.7);
 }
 
@@ -395,6 +395,7 @@ main a:hover {
   justify-content: center;
   align-items: center;
   padding: 1.1rem 1.5rem;
+  min-height: 100%;
 }
 
 .snapshot-link {
