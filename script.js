@@ -1,15 +1,95 @@
-
 document.addEventListener("DOMContentLoaded", () => {
+  const wordle = document.getElementById("name-wordle");
   const tiles = document.querySelectorAll("#name-wordle .flip");
+  const panels = document.querySelectorAll(".panel-reveal");
+  const skipHash = window.location.hash === "#about";
+  const timeouts = [];
+  let animating = false;
+
+  const clearTimeouts = () => {
+    timeouts.forEach((id) => clearTimeout(id));
+    timeouts.length = 0;
+  };
+
+  const hideHint = () => {
+    const hint = document.querySelector(".animation-hint");
+    if (hint) hint.classList.add("is-hidden");
+  };
+
+  const finishAnimation = () => {
+    if (!animating && !skipHash) return;
+    animating = false;
+    clearTimeouts();
+    if (wordle) wordle.classList.add("skip-anim");
+    tiles.forEach((flip) => flip.classList.add("reveal"));
+    panels.forEach((panel) => panel.classList.add("is-visible"));
+    hideHint();
+  };
+
+  if (skipHash) {
+    if (wordle) wordle.classList.add("skip-anim");
+    tiles.forEach((flip) => flip.classList.add("reveal"));
+    panels.forEach((panel) => panel.classList.add("is-visible"));
+    return;
+  }
+
+  if (tiles.length === 0) {
+    panels.forEach((panel) => panel.classList.add("is-visible"));
+    return;
+  }
+
+  animating = true;
+
+  const hint = document.createElement("p");
+  hint.className = "animation-hint";
+  hint.textContent = "Press any key to skip animation";
+  if (wordle && wordle.parentNode) {
+    wordle.insertAdjacentElement("afterend", hint);
+  }
+
+  const TILE_STAGGER = 270;
+  const PANEL_STAGGER = 140;
+  const AFTER_TILES = 200;
 
   tiles.forEach((flip, index) => {
-    setTimeout(() => {
-      flip.classList.add("reveal");
-    }, index * 350); // 0ms, 200ms, 400ms, ...
+    timeouts.push(
+      setTimeout(() => {
+        flip.classList.add("reveal");
+      }, index * TILE_STAGGER)
+    );
   });
-});
 
-// CONTACT FORM
+  const revealDelay = tiles.length * TILE_STAGGER + AFTER_TILES;
+
+  panels.forEach((panel, index) => {
+    timeouts.push(
+      setTimeout(() => {
+        panel.classList.add("is-visible");
+      }, revealDelay + index * PANEL_STAGGER)
+    );
+  });
+
+  const totalMs =
+    revealDelay + Math.max(panels.length - 1, 0) * PANEL_STAGGER + 400;
+
+  timeouts.push(
+    setTimeout(() => {
+      animating = false;
+      hideHint();
+    }, totalMs)
+  );
+
+  const onSkipKey = (e) => {
+    if (!animating) return;
+    if (e.target.closest("input, textarea, select, button, [contenteditable='true']")) {
+      return;
+    }
+    e.preventDefault();
+    finishAnimation();
+  };
+
+  document.addEventListener("keydown", onSkipKey);
+});
 
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("contact-status");
