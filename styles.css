@@ -231,9 +231,17 @@ main a:hover {
   width: 180px;
   height: 180px;
   object-fit: cover;
+  object-position: center 18%;
   border-radius: var(--radius);
   border: 2px solid var(--accent);
   display: block;
+}
+
+.photo-caption {
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95em;
 }
 
 .portfolio-page {
